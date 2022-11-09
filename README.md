@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 
+[![Continuous Integration (CI)](https://github.com/Chandan9898Kumar/Pausable-auto-incrementer/actions/workflows/CI.yml/badge.svg)](https://github.com/Chandan9898Kumar/Pausable-auto-incrementer/actions/workflows/CI.yml)
 
 ## Available Scripts
 
