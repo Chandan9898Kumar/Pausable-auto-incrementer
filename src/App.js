@@ -5,7 +5,8 @@ import MyClassApp from './ClassCompo/MyAppClass'
 import Home  from './Home'
 function App() {
   return (
-   <>
+   <> 
+   <label>My App</label>
    <BrowserRouter>
       <Routes>
           <Route exact path="/" element={<Home  />} />
@@ -13,8 +14,6 @@ function App() {
           <Route  exact path='/Class' element={<MyClassApp />} />
       </Routes>
    </BrowserRouter>
-    
-
    </>
   );
 }

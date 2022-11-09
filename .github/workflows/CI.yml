@@ -1,0 +1,38 @@
+name: Continuous Integration (CI)
+
+on:
+  push:
+    branches:
+      # We can define multiple branches as well      
+      - feature/increment
+  pull_request:
+    branches:
+      - master
+      
+jobs:
+  build:
+    # Defines the type of runner the job runs on
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout to the repository
+        uses: actions/checkout@v2
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2-beta
+        with: 
+          version: 12
+       
+      - name: Install package dependencies
+        run: npm install
+      
+     # - name: Check linting and formatting
+        # Custom script for checking the linting and formatting being in place
+      #  run: npm run lint
+      
+      # Run test cases and this could ensure minimum coverage as well if set
+      - name: Execute test cases
+        run: npm run test
+        
+      - name: Create test build
+        run: npm run build
