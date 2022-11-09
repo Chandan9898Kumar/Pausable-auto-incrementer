@@ -13,8 +13,6 @@ function App() {
           <Route  exact path='/Class' element={<MyClassApp />} />
       </Routes>
    </BrowserRouter>
-    
-
    </>
   );
 }
